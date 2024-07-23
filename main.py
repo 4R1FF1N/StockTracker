@@ -1,6 +1,6 @@
 import requests 
 from bs4 import BeautifulSoup
-
+import time
 
 
 urls = [
@@ -24,7 +24,7 @@ def getprice(i):
         
 
 if __name__ == "__main__":
-    #while True: #remove these hashtags to LOOP 24/7
-        #getprice(i) #remove2
+    while True:
         stock_price = getprice(i)
         print(stock_price)
+        time.sleep(60)
