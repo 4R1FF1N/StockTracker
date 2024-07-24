@@ -1,6 +1,11 @@
 > [!NOTE]
 > Stock Tracker coded by @GR1FF1N
-> Use as You wish, modify as you wish. 
+> Use as You wish, modify as you wish.
+
+> [!CAUTION]
+> This project is for non-commercial use only.
+
+
 <ul>
   <li>YouTube: https://www.youtube.com/@JohnDoeSec</li>
   <li>Twitter: https://x.com/JohnTech2023</li>
