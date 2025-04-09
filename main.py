@@ -4,19 +4,19 @@ import time
 
 
 urls = [
-    "https://www.google.com/search?q=tesla+stock+price",
-    "https://www.google.com/search?q=nvidia+stock+price",
-    "https://www.google.com/search?q=apple+stock+price",
-    "https://www.google.com/search?q=cisco+stock+price",
-    "https://www.google.com/search?q=microstrategy+stock+price",
+    "https://search.brave.com/search?q=Tesla+Stock+Price&source=web",
+    "https://search.brave.com/search?q=Ford+Stock+Price&source=web",
+    "https://search.brave.com/search?q=Nvidia+Stock+Price&source=web",
+    "https://search.brave.com/search?q=AMD+Stock+Price&source=web",
+    "https://search.brave.com/search?q=Intel+Stock+Price&source=webe",
 ]
 i = 0
-headers={"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36"}
+headers={"User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0"}
 def getprice(i):
        for i in range(len(urls)):
         HTML = requests.get(urls[i], headers=headers)
         soup = BeautifulSoup(HTML.text, "lxml")
-        text = soup.find("div", attrs={"class": "PZPZlf ssJ7i B5dxMb"}).text + " | " + soup.find("span", attrs={"jsname": "vWLAgc"}).text + soup.find("span", attrs={"jsname": "T3Us2d"}).text
+        text = soup.find("h1", attrs={"class": "desktop-default-regular t-secondary svelte-37ljbo"}).text + " | " + soup.find("h1", attrs={"class": "desktop-heading-h2 mr-10 t-primary mb-0"}).text
         i = i + 1
         text2 = text
         print(text2)
